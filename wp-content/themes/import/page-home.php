@@ -249,7 +249,7 @@ $howitworks_img_src = wp_get_attachment_image_url($howitworks_img_id, 'full');
                                 <input class="form__input" type="text" name="company" placeholder="Компания:">
                             </label>
                             <label class="form__inpt-container">
-                                <input class="form__input" type="number" name="phone" placeholder="Телефон:" data-parsley-required>
+                                <input class="form__input" type="number" name="phone" placeholder="Телефон:" data-parsley-required style="-moz-appearance: textfield">
                             </label>
                             <label class="form__inpt-container">
                                 <input class="form__input" type="email" name="e-mail" placeholder="Эл. почта:" data-parsley-required>
