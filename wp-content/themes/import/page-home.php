@@ -20,7 +20,7 @@ $intro_img_src = wp_get_attachment_image_url($intro_img_id, 'full');
     </div>
 </section>
 
-<section class="delivery section">
+<section class="delivery section" id="import">
     <div class="site-container js-anim-fade-out" data-intersection-ratio="-0.1">
         <h2 class="delivery__heading site-heading _dark site-line">Привезём вам</h2>
         <div class="delivery__container">
