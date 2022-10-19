@@ -8,17 +8,32 @@
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
+$token = '5784895850:AAGGZSro2uXroSYdSHyPTSiuqz309XTVzgs';
+$chat_id = '-719954746';
 $name = $_POST["name"];
 $company = $_POST["companay"];
 $tel = $_POST["tel"];
 $mail = $_POST["mail"];
 
-echo $name;
-echo $company;
-echo $mail;
-echo $tel;
+$arr = array(
+    'Форма:' => "Заявка с tech-import.com",
+    'Имя:' => $name,
+    'Телефон:' => $tel,
+    'Почта:' => $mail,
+    'Наименование компании:' => $company,
+);
 
+foreach ($arr as $key => $value) {
+    $message .= "<b>" . $key . "</b> " . $value . "%0A";
+};
 
+$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$message}", "r");
+
+if ($sendToTelegram) {
+    echo "OK";
+} else {
+    echo "Error";
+}
 
 // $queryUrl = 'https://ricc-it.bitrix24.ru/rest/18/44l42tj7bfzqjbl7/crm.lead.add.json';
 // $queryData = http_build_query(array(
