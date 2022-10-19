@@ -20,7 +20,7 @@ $intro_img_src = wp_get_attachment_image_url($intro_img_id, 'full');
     </div>
 </section>
 
-<section class="delivery section">
+<section class="delivery section" id="import">
     <div class="site-container js-anim-fade-out" data-intersection-ratio="-0.1">
         <h2 class="delivery__heading site-heading _dark site-line">Привезём вам</h2>
         <div class="delivery__container">
@@ -249,7 +249,7 @@ $howitworks_img_src = wp_get_attachment_image_url($howitworks_img_id, 'full');
                                 <input class="form__input" type="text" name="company" placeholder="Компания:">
                             </label>
                             <label class="form__inpt-container">
-                                <input class="form__input" type="number" name="phone" placeholder="Телефон:" data-parsley-required>
+                                <input class="form__input" type="number" name="phone" placeholder="Телефон:" data-parsley-required style="-moz-appearance: textfield">
                             </label>
                             <label class="form__inpt-container">
                                 <input class="form__input" type="email" name="e-mail" placeholder="Эл. почта:" data-parsley-required>
